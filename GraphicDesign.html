@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Code Rivals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400&display=swap" rel="stylesheet">
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<style>
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        max-width: 1170px;
+        margin: auto;
+    }
+
+    .flip-main .flip-card {
+        flex: 0 0 calc(33.33% - 30px);
+        margin: 0 15px 30px;
+        perspective: 1000px;
+        /*remove this if you dont want the 3d effect*/
+    }
+
+    .flip-main .flip-card-inner {
+        box-shadow: 0 0 10px #a9b3d6;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+    }
+
+    .flip-main .flip-card-front img {
+        height: 20rem;
+    }
+
+    .flip-main .flip-card-front,
+    .flip-main .flip-card-back {
+        backface-visibility: hidden;
+    }
+
+    .flip-main .flip-card-back {
+        background-color: #00adb5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: rotateY(180deg);
+    }
+
+    .flip-main .flip-card-back h3 {
+        font-size: 24px;
+        color: #ffffff;
+        margin: 0 0 5px;
+    }
+
+    .flip-main .flip-card-back p {
+        font-size: 16px;
+        color: #e9e9e9;
+        margin: 0;
+    }
+
+    .flip-main .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front {
+        height: 27rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+
+    }
+
+    .flip-card-front h1 {
+        margin-top: 1rem;
+        font-family: kanit;
+
+    }
+
+
+    /*responsive*/
+    @media(max-width: 991px) {
+        .flip-main .flip-card {
+            flex: 0 0 calc(50% - 30px);
+        }
+    }
+
+    @media(max-width: 767px) {
+        .flip-main .flip-card {
+            flex: 0 0 calc(100% - 30px);
+        }
+    }
+
+    .flip-card-back {
+        background-color: white;
+        color: black;
+        transform: rotateY(180deg);
+        padding: 50px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .price {
+        color: white;
+        font-size: 50px;
+        font-weight: 800;
+        margin-top: 1rem;
+    }
+
+    .list-group-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        align-items: center;
+        background-color: #00adb5;
+        border: none !important;
+    }
+
+    .main-List {
+        margin: 0px;
+        padding: 0px;
+        width: 17rem;
+        height: 10rem;
+    }
+
+
+
+    .fa-question-circle {
+        color: #393e46 !important;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 5px;
+
+    }
+
+
+
+    .PrevInc {
+        color: red;
+        font-size: 20px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .fa-check {
+        margin-right: 4px !important;
+    }
+
+    .fa-times {
+        margin-right: 10px !important;
+
+    }
+
+    .flip-card-front h1 {
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .flip-card-front {
+        height: 26rem;
+
+    }
+
+    .flip-card-back p {
+        font-size: 14px !important;
+    }
+</style>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .pricingTable {
+        text-align: center;
+        background: #fff;
+        box-shadow: 0 0 10px #ababab;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        color: #cad0de;
+        transform: scale(1);
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover {
+        transform: scale(1.05);
+        z-index: 1
+    }
+
+    .pricingTable .pricingTable-header {
+        padding: 40px 0;
+        background: #f5f6f9;
+        border-radius: 10px 10px 50% 50%;
+        height: 12rem;
+        margin-bottom: 1rem;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable .pricingTable-header i {
+        font-size: 50px;
+        color: #393e46;
+        margin-bottom: 10px;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .price-value {
+        font-size: 35px;
+        color: #00adb5;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .month {
+        display: block;
+        font-size: 14px;
+        color: #393e46
+    }
+
+    .pricingTable:hover .month,
+    .pricingTable:hover .price-value,
+    .pricingTable:hover .pricingTable-header i {
+        color: #fff
+    }
+
+    .pricingTable .heading {
+        font-size: 24px;
+        color: #00adb5;
+        margin-bottom: 20px;
+        text-transform: uppercase
+    }
+
+    .pricingTable .pricing-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        /* margin-left: 1rem; */
+        padding: 2rem;
+        padding-top: 0px;
+
+    }
+
+    .pricingTable .pricing-content ul li {
+        line-height: 30px;
+        color: #393e46
+    }
+
+    .pricingTable .pricingTable-signup a {
+        display: inline-block;
+        font-size: 15px;
+        color: #fff;
+        padding: 10px 35px;
+        border-radius: 20px;
+        background: #00adb5;
+        text-transform: uppercase;
+        transition: all .3s ease 0s
+    }
+
+    .pricingTable .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.blue .heading,
+    .pricingTable.blue .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.blue .pricingTable-signup a,
+    .pricingTable.blue:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.blue .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.red .heading,
+    .pricingTable.red .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.red .pricingTable-signup a,
+    .pricingTable.red:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.red .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.green .heading,
+    .pricingTable.green .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.green .pricingTable-signup a,
+    .pricingTable.green:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.green .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.blue:hover .price-value,
+    .pricingTable.green:hover .price-value,
+    .pricingTable.red:hover .price-value {
+        color: #fff
+    }
+
+
+
+
+
+    .fa-check {
+        margin-right: 4px !important;
+    }
+
+    .fa-times {
+        margin-right: 10px !important;
+
+    }
+
+    .pricing-content ul {
+        text-align: left;
+    }
+
+
+    .pricing-content {
+        min-height: 38rem;
+        height: fit-content;
+
+
+    }
+
+    .fa-question-circle {
+        color: #00adb5;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 5px;
+
+    }
+
+    .topFeature {
+        text-align: center;
+        font-size: 18px;
+        /* font-weight: 500; */
+        font-family: inherit;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    .bestFor {
+        font: 400;
+        font-size: 15px;
+        text-align:start ;
+        color: #393e46;
+        background-color: #f5f6f9;
+        min-height: 8rem;
+        height: 10rem;
+       display: inline-block;
+    margin: 0;
+    padding: 20px;
+    }
+    .PrevInc {
+        color: red;
+        font-size: 14px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    @media screen and (max-width:575px) {
+        .main {
+            font-size: 20px;
+        }
+
+        .pricing-content {
+            min-height: fit-content !important;
+        }
+
+        .PrevInc {
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .bestFor {
+        font-size: 15px;
+        min-height: fit-content !important;
+        height: fit-content !important;
+    }
+        .topFeature {
+            margin-top: 10px !important;
+        }
+    }
+
+    .headdlast {
+        font-size: 2rem;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        text-align: justify;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    .order-2 p {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: start;
+    display: inline-block;
+
+    }
+
+    @media screen and (max-width:575px) {
+        .headdlast {
+            font-size: 1.6rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            text-align: center;
+        }
+
+        .order-2 p {
+            margin-top: 1rem;
+            font-size: larger;
+        }
+
+        .demo {
+            margin: 1rem;
+            margin-top: 2rem;
+        }
+
+    }
+
+    .demo {
+        margin-top: 1rem;
+    }
+
+    .pricingTable {
+        margin-top: 2rem;
+    }
+</style>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow" style="width: 3rem; height: 3rem; color: #00adb5;" role="status">
+                <span class="sr-only" style="color: #393e46;">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+                style="background-color: white; color: #393e46;">
+                <a href="./index.html" class="navbar-brand p-0">
+                    <img class="img-fluid animated zoomIn multi-typewriter" src="img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="career.html" class="nav-item nav-link active">Career</a>
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="./career.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Join Code Rivals
+                        ?</a>
+                </div>
+            </nav>
+
+
+            <div class="container-xxl py-5  hero-header" style="background-color: #00adb5;">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Graphic Designing</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <h2 style="font-family: Kanit; color: #393e46; font-style: italic;">
+                                        Crafting captivating visuals that elevate your brand: Discover the power of
+                                        design with our software company's expert graphic designers.
+                                    </h2>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+
+            <header class="section-header">
+                <h3 class="text-center">Graphic Designing</h3>
+                <p class="text-center">"Creative visual communication and branding.
+                    "
+                </p>
+            </header>
+
+            <div class="row about-container">
+
+                <div class="col-lg-6 content order-lg-1 order-2">
+                    <p>
+                        We understand the importance of visual communication and creating a strong brand identity. Our
+                        team of experienced designers is passionate about delivering creative and effective design
+                        solutions that help our clients stand out in their respective industries. From logo design,
+                        business cards, and flyers, to brochures, social media graphics, website design, and even
+                        packaging design, we offer a wide range of professional graphic design services to suit your
+                        business needs. Let us help bring your brand to life with our eye-catching designs that will
+                        leave a lasting impression on your audience. Contact us today to learn more about our graphic
+                        design services and pricing plans.
+                    </p>
+
+
+                </div>
+
+                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+                    <img src="img/graphic.png" class="img-fluid" alt="" style="margin-bottom: 5rem;">
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="flip-main">
+            <h1 class="headdlast">" Explore our pricing plans for professional graphic design services that can help
+                bring your brand to life "</h1>
+
+            <div class="container">
+                <div class="row">
+                    <!-- flip card start -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Logo Design</h1>
+                                <img src="img/logo-design-49579.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price">$55 - $550</span>
+                                <p>Get a stunning basic to professional logo design at affordable rates range </p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Research and Analysis
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Tailored logo for target audience."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Design Concepts
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple designs to choose from."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Branding Guidelines
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Consistent use across all mediums."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Customized Solutions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Personalized to reflect company personality."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Business Card </h1>
+                                <img src="img/business.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price">$35 - $220</span>
+                                <p>Elevate your brand with a professionally designed business card starting from $35,
+                                    with pricing options up to $220,</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of designers will work with you to create a unique and professional design that reflects your brand and captures your audience's attention.."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Print-Ready Files
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We'll provide you with print-ready files that are optimized for your printer, so you can easily print your cards with a professional finish."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Brand Consistency
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We'll ensure that your business card design matches your brand guidelines and is consistent with your overall branding strategy, so you can reinforce your brand identity."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Customized Solutions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Personalized to reflect company personality."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Flyers Design </h1>
+                                <img src="img/flyers.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price">$45 - $330</span>
+                                <p>we offer eye-catching flyer design services that will help you promote your business
+                                    with a effective design.</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of designers will work with you to create a unique and professional design that reflects your brand and captures your audience's attention.."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Effective Call-to-Action
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We'll ensure that your flyer design includes a clear and effective call-to-action that encourages your target audience to take the desired action, whether it's attending an event, visiting your website, or making a purchase."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Quick Turnaround
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We offer fast turnaround times to ensure that you receive your flyer design in a timely manner, so you can start promoting your business or event as soon as possible."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>High-Quality Graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We use high-quality graphics and images that are optimized for print and digital media, ensuring that your flyer looks great no matter how it's distributed."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Brochure Design
+                                </h1>
+                                <img src="img/Brochure.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price"> $120 - $960
+                                </span>
+                                <p>we offers professional brochure design allowing you to effectively showcase your
+                                    products with a visually appealing design.</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of designers will work with you to create a unique and professional design that reflects your brand and captures your audience's attention.."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Effective Call-to-Action
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We'll ensure that your Brochure design includes a clear and effective call-to-action that encourages your target audience to take the desired action, whether it's attending an event, visiting your website, or making a purchase."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Quick Turnaround
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We offer fast turnaround times to ensure that you receive your Brochure design in a timely manner, so you can start promoting your business or event as soon as possible."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>High-Quality Graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We use high-quality graphics and images that are optimized for print and digital media, ensuring that your Brochure looks great no matter how it's distributed."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>
+                                    Social Media Graphics
+                                </h1>
+                                <img src="img/socialmedia.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price"> $35 - $220
+                                </span>
+                                <p>we offers high-quality social media graphics, ensuring that your brand stands out on
+                                    social media with effective graphics.</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of designers will work with you to create a unique and professional design that reflects your brand and captures your audience's attention.."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Multiple Platforms:
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We offer social media graphics services for multiple platforms including Facebook, Twitter, Instagram, LinkedIn, and more, ensuring that your brand is consistent and visually appealing across all social media channels."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Quick Turnaround
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We offer fast turnaround times to ensure that you receive your social media graphics design in a timely manner, so you can start promoting your business or event as soon as possible."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>High-Quality Graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We use high-quality graphics and images that are optimized for digital media, ensuring that your social media graphics looks great no matter how it's distributed."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>
+                                    Website Design
+                                </h1>
+                                <img src="img/website.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price"> $330-$2,200
+                                </span>
+                                <p>Providing you with a user-friendly website that effectively showcases your brand and
+                                    message.</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of expert designers will work closely with you to create a custom website design that's tailored to your brand and specific marketing goals, ensuring that your website stands out and effectively communicates your message."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>User-Friendly:
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We prioritize user experience in our website design services, ensuring that your website is easy to navigate and use, making it more likely that visitors will convert into customers."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Responsive Design:
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our website designs are optimized for all devices, ensuring that your website looks great and functions properly on desktops, laptops, tablets, and smartphones."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>High-Quality Graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title=" We use high-quality graphics and images that are optimized for digital media, ensuring that your Website Design looks great no matter how it's distributed."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>
+                                    Packaging design
+                                </h1>
+                                <img src="img/pakage.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price"> $120-$960
+                                </span>
+                                <p>We offers professional packaging design services that ensure your product stands out
+                                    on the shelves</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of expert designers will create custom packaging designs that are tailored to your product, brand, and target audience, ensuring that your product catches the eye of consumers and stands out from the competition."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Unique Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of expert designers will create unique packaging designs that capture the essence of your brand and product, ensuring that your package not only stands out on the shelves but also leaves a lasting impression on consumers."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Functional Design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We prioritize the functional aspects of your package design, ensuring that your package is easy to open, store, and transport, while also keeping your product safe and secure."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Material Selection
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We work with you to select the right materials for your packaging, taking into account your budget, product needs, and environmental impact, ensuring that your packaging not only looks great but also functions well and is eco-friendly."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>
+                                    Letterhead Design </h1>
+                                <img src="img/letterhead.png" alt="flip-card">
+
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="price"> $50-$300
+                                </span>
+                                <p>We offers professional letterhead design services to help your business create a
+                                    strong brand identity and leave a lasting impression on clients and partners</p>
+                                <br>
+                                <ul class="main-List">
+                                    <li class="main"><i class="fas fa-check text-success"></i>Custom Designs
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our team of experienced designers will work with you to create a custom letterhead design that reflects your brand identity, values, and messaging, ensuring that your letterhead stands out and creates a lasting impact."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Professional Layout
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We prioritize the layout and formatting of your letterhead design, ensuring that it is easy to read and presents your business information in a professional and organized manner, making it easier for clients and partners to get in touch with you."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Brand Consistency
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We ensure that your letterhead design is consistent with your overall brand image and messaging, so that it aligns with the rest of your marketing and branding efforts."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Print-Ready Design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We provide you with a print-ready letterhead design in the file format of your choice, making it easy for you to print it out and use it for all your official business correspondence."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Revisions
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Multiple revisions to meet vision."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" Ongoing support for effective use."></i>
+                                    </li>
+                                </ul>
+                                <button class="mt-4 mb-4 btn btn-dark btn-lg rounded-pill">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- flip card end -->
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="demo">
+            <h1 class="headdlast">"Unleash Your Brand's Potential with Our Design Packages!</h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <i class="fas fa-home"></i>
+
+                                </h4>
+                                <div class="pricing-plan mt-4 pt-2">
+                                    <h4 class="text-muted"><s>$799</s> <span class="plan pl-3 price-value">$450
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+
+
+                            <h3 class="heading">Basic</h3>
+
+                            <div class="pricing-content">
+                                <p class="bestFor">The Basic Package is best suited for small businesses and startups
+                                    looking for essential branding materials at an affordable price</p>
+                                <ul>
+
+
+                                    <h6 class="topFeature">Top feature</h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Logo design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 3 revisions)"></i>
+                                    </li>
+
+                                    <li class="main"><i class="fas fa-check text-success"></i>Business card design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 2 revisions)
+                                           "></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Flyer design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 2 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Letterhead design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 2 revisions)"></i>
+                                    </li>
+
+
+
+
+                                    <h6 class="topFeature">Service and Support </h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                        Guarantee
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="pricingTable-signup">
+                                <a href="./contact.html">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <i class="fas fa-home"></i>
+
+                                </h4>
+                                <div class="pricing-plan mt-4 pt-2">
+                                    <h4 class="text-muted"><s>$1399</s> <span class="plan pl-3 price-value">$1,050
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+
+
+                            <h3 class="heading">Standard Package</h3>
+
+                            <div class="pricing-content">
+                                <p class="bestFor">
+
+                                    The Standard Package is perfect for medium-sized businesses seeking a comprehensive
+                                    branding solution, including various print and digital materials with multiple
+                                    revisions to guarantee satisfaction.</p>
+                                <ul>
+
+
+                                    <h6 class="topFeature">Top feature</h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Logo design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 5 revisions)"></i>
+                                    </li>
+
+                                    <li class="main"><i class="fas fa-check text-success"></i>Business card design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 3 revisions)
+                                           "></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Flyer design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 3 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Letterhead design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 2 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Brochure design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 4 pages, up to 2 revisions)"></i>
+                                    </li>
+
+                                    <li class="main"><i class="fas fa-check text-success"></i>Social media graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="(up to 2 platforms, up to 3 revisions per platform)"></i>
+                                    </li>
+
+
+                                    <h6 class="topFeature">Service and Support </h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                        Guarantee
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="pricingTable-signup">
+                                <a href="./contact.html">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <i class="fas fa-home"></i>
+
+                                </h4>
+                                <div class="pricing-plan mt-4 pt-2">
+                                    <h4 class="text-muted"><s>$3999</s> <span class="plan pl-3 price-value">$2999
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+
+
+                            <h3 class="heading">Standard Package</h3>
+
+                            <div class="pricing-content">
+                                <p class="bestFor">The Premium Package is the top-tier option for large businesses
+                                    seeking a comprehensive branding solution, including unlimited revisions for the
+                                    logo design, a custom website, and a range of print and digital materials.</p>
+                                <ul>
+
+
+                                    <h6 class="topFeature">Top feature</h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Logo design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(unlimited revisions)"></i>
+                                    </li>
+
+                                    <li class="main"><i class="fas fa-check text-success"></i>Business card design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title=" (up to 5 revisions)
+                                           "></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Flyer design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 8 pages, up to 3 revisions)
+                                            "></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Social media graphics
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 3 platforms, up to 5 revisions per platform)
+                                            "></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Website design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 10 pages, up to 3 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Packaging design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 3 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Letterhead design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 2 revisions)"></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>Brochure design
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="(up to 4 pages, up to 2 revisions)"></i>
+                                    </li>
+
+
+                                    <h6 class="topFeature">Service and Support </h6>
+                                    <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                    </li>
+                                    <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                        Guarantee
+                                        <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="pricingTable-signup">
+                                <a href="./contact.html">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid  text-light footer wow fadeIn" data-wow-delay="0.1s"
+            style="background-color: #00adb5;">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>USA, Chicago</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+ 1 312 6679048
+                        </p>
+                        <p><i class="fa fa-envelope me-3"></i>info@coderivals.tech</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Links<span></span></p>
+                        <a class="btn btn-link" href="./about.html">About Us</a>
+                        <a class="btn btn-link" href="./service.html">Services</a>
+                        <a class="btn btn-link" href="./contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="./career.html">Career</a>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>Get The Latest update of our services</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane  fs-4"></i></button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4"> location<span></span></p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380514.4939672074!2d-88.06162895501491!3d41.833261639516046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2s!4v1682933188517!5m2!1sen!2s"
+                            width="300" height="200" style="border-radius: 1rem" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://freewebsitecode.com">Code Rivals</a>,
+                            All
+                            Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="./index.html">Home</a>
+                                <a href="./about.html">Privacy Policy</a>
+                                <a href="./contact.html">Help</a>
+                                <a href="./career.html">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <a href="#banner" class="btn btn-lg  btn-lg-square back-to-top"
+            style="background-color: #393e46; color: #eeeeee;"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script async id="slcLiveChat" default-number="DEFAULT-NUMBER" src="https://widget.sonetel.com/SonetelWidget.min.js"
+        data-account-id="208243966"></script>
+
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

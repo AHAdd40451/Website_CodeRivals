@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Code Rivals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Template Stylesheet -->
+</head>
+<style>
+       
+
+    @media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+      /* Target Safari only */
+      body {
+        font-family: "Helvetica Neue", sans-serif; /* Set a different font for Safari */
+      }
+    }
+  }
+  
+  /* All other browsers */
+  @media all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+      /* Target all other browsers */
+      body {
+        font-family: "kanit", "ubuntu"; /* Set a default font for all other browsers */
+      }
+    }
+  }
+  
+
+    .banner-image {
+        transition: opacity 3s ease-in-out;
+        width: fit-content;
+        height: 20rem;
+        float: right;
+    }
+
+    .banner-image.active {
+        opacity: 10;
+    }
+
+
+    .dream-section {
+        position: relative;
+    }
+
+    .dream-section .bg-layer {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 50%;
+        background: #222831;
+    }
+
+    .dream-section .inner-container {
+        position: relative;
+        padding: 59px 60px 68px 60px;
+        overflow: hidden;
+    }
+
+    .dream-section .inner-container .pattern-layer {
+        position: absolute;
+        left: 190px;
+        top: 5px;
+        width: 377px;
+        height: 410px;
+        background-repeat: no-repeat;
+    }
+
+    .dream-section .sec-title h6 {
+        color: #fff;
+    }
+
+    .dream-section .sec-title h6:before {
+        background: #222831;
+    }
+
+    .dream-section .sec-title {
+        margin-bottom: 24px;
+    }
+
+    .dream-section .text p {
+        color: #fff;
+        margin-bottom: 32px;
+    }
+
+    .dream-section .text a {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 2rem;
+        padding: 14px 32px;
+    }
+
+    .dream-section .text a span {
+        position: relative;
+        padding-right: 21px;
+    }
+
+    .dream-section .text a span:before {
+        position: absolute;
+        content: "\f108";
+        font-family: flaticon;
+        top: -2px;
+        right: 0px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .dream-section .text a:hover {
+        background: #222831;
+    }
+
+    .dream-section .list li {
+        position: relative;
+        display: block;
+        padding: 17px 0px 14px 30px;
+    }
+
+    .dream-section .list li:last-child {
+        border-bottom: none;
+    }
+
+    .dream-section .list li a {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: "Heebo", sans-serif;
+        color: #fff;
+    }
+
+    .dream-section .list li a:hover {
+        text-decoration: underline;
+    }
+
+    .dream-section .list li i {
+        position: absolute;
+        left: 0px;
+        top: 18px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .dream-section .list li a:before {
+        position: absolute;
+        content: "\f10a";
+        font-family: flaticon;
+        top: 0px;
+        right: 0px;
+        font-size: 12px;
+        transition: all 500ms ease;
+    }
+
+    .dream-section .list li a:hover:before {
+        transform: rotate(-45deg);
+    }
+
+    .bg-color-1 {
+        background: #222831;
+    }
+
+
+    .dream-section .inner-container {
+        background-color: #00adb5;
+    }
+
+    .dream-section .text a:hover {
+        color: #eeeeee;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .dream-section .inner-container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+    }
+
+
+    .multi-typewriter {
+        animation: moveUpDown 3s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .hero-header {
+        background-color: #00adb5;
+        animation: background-animation 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes background-animation {
+        0% {
+            background-color: #00adb5;
+        }
+
+        50% {
+            background-color: #17ced8;
+        }
+
+        100% {
+            background-color: #13bcc2;
+        }
+    }
+
+    .text p {
+        font-size: 2rem;
+    }
+
+    .light h6 {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        .text p {
+            font-size: 1rem;
+        }
+    }
+
+</style>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow" style="width: 3rem; height: 3rem; color: #00adb5;" role="status">
+                <span class="sr-only" style="color: #393e46;">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+                style="background-color: white; color: #393e46;">
+                <a href="./index.html" class="navbar-brand p-0">
+                    <img class="img-fluid animated zoomIn multi-typewriter" src="img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="career.html" class="nav-item nav-link">Career</a>
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="./career.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Join Code Rivals
+                        ?</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl hero-header sea-animation" style="background-color: #00adb5;" id="banner">
+                <div class="container px-lg-5">
+                    <div class="row g-5 align-items-end">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-[#393e46] mb-4">
+                                Our expertise is in</h1>
+                            <h1 class="text-white mb-4 multi-typewriter" id="typewriter">
+                            </h1>
+
+
+                            <p class=" pb-3 animated slideInDown"
+                                style="color: #393e46; font-family: Kanit; font-weight: bolder;">Transform
+                                your business with our innovative
+                                software solutions.
+                                From web applications to mobile apps and everything in between,
+                                our expert team can bring your ideas to life.
+                                Get in touch with us today and let's start building your next big thing!</p>
+
+                            <p style="color: #ffffff; font-family: Kanit; font-weight: bolder;"
+                                class=" animated slideInDown">Get a Quote & Discover pricing with a simple click.</p>
+                            <div class="position-relative w-100 ">
+                                <form name="QouteForm" id="QouteForm" onsubmit="QuoteEmail();return false;">
+                                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
+                                        placeholder="Enter Your Email We Will Contact You" style="height: 48px;"
+                                        name="emailFromBanner" id="emailFromBanner" required>
+                                    <button type="submit" value="submit" id="submit"
+                                        class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                            class="fa fa-paper-plane  fs-4" style="color: #00adb5;"></i></button>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start" onload="rotateImage()">
+                            <img class="img-fluid animated zoomIn multi-typewriter banner-image" alt="" id="banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title text-[#393e46]">About Us<span></span></p>
+                        <h1 class="mb-5">We deliver exceptional digital solutions for businesses</h1>
+                        <p class="mb-4">Code Rivals: Your go-to software house in USA. Our highly skilled team
+                            delivers tailored software solutions that help businesses succeed. We specialize in web
+                            development, graphic designing, and more. Let us empower your code and surpass your rivals.
+                        </p>
+
+                        <a href="./about.html" class="btn  py-sm-3 px-sm-5 rounded-pill mt-3"
+                            style="background-color:#393e46; color: #eeeeee;">Read More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s"
+                            src="img/About-Us-PNG-Isolated-Photo.png">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title  justify-content-center" style="color: #eeeeee;">
+                        <span></span>Our
+                        Services<span></span>
+                    </p>
+                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="./WebDev.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa fa-globe fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">Web Development</h5>
+                                <p class="m-0">Make a lasting impression on your audience with our top-notch web
+                                    development
+                                    services that are tailored to meet your unique business needs and goals.</p>
+                                <a class="btn btn-square" href="./WebDev.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="./AppDev.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fab fa-android fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">App Development</h5>
+                                <p class="m-0">Our expert team of app developers leverage the latest technologies and
+                                    industry trends to build high-quality, scalable, and intuitive mobile apps that
+                                    drive
+                                    engagement and growth for your business.</p>
+                                <a class="btn btn-square" href="./contact.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="./SoftDev.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-laptop-code fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">Software Development</h5>
+                                <p class="m-0">Our software company specializes in creating bespoke software solutions
+                                    that
+                                    address your unique business needs and requirements.</p>
+                                <a class="btn btn-square" href="./contact.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="./GraphicDesign.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa fa-magic fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">Graphics Designing</h5>
+                                <p class="m-0">Elevate your brand's visual identity with our exceptional graphic design
+                                    services that combine creativity and strategy to create captivating branding
+                                    materials.
+                                </p>
+                                <a class="btn btn-square" href="./GraphicDesign.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="./DigitalMark.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-mail-bulk fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">Digital Marketing</h5>
+                                <p class="m-0">Maximize your online reach and drive business growth with our
+                                    comprehensive
+                                    digital marketing services that leverage the latest trends and technologies to
+                                    deliver
+                                    exceptional results.
+                                </p>
+                                <a class="btn btn-square" href="./contact.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+
+                    </div>
+                 
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="./DigitalMark.html" style="color: #393e46;">
+                            <div class="service-item d-flex flex-column text-center rounded">
+                                <div class="service-icon flex-shrink-0">
+                                    <i class="fa fa-search fa-2x"></i>
+                                </div>
+                                <h5 class="mb-3">SEO Optimization</h5>
+                                <p class="m-0">Our expert team at Code Rivals utilizes cutting-edge techniques and tools
+                                    to
+                                    optimize your website's on-page and off-page SEO, ensuring maximum visibility and
+                                    exposure in the digital world.</p>
+                                <a class="btn btn-square" href="./contact.html"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+
+        <!-- dream-section -->
+        <section class="dream-section">
+            <div class="bg-layer"></div>
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="pattern-layer"></div>
+                    <div class="row align-items-center clearfix">
+                        <div class="col-lg-6 col-md-12 col-sm-12 left-column">
+                            <div class="left-content">
+                                <div class="sec-title light">
+                                    <h6>Join Our Team</h6>
+                                    <h2>Make Your Dream a Reality</h2>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        "We are a team of passionate professionals working together to deliver
+                                        innovative
+                                        software solutions to our clients. Come join us and be part of something
+                                        amazing."
+                                    </p>
+                                    <!-- <a href="career.html"><span>View Open Positions</span></a> -->
+                                    <a href="./career.html" class="btn  py-sm-3 px-sm-5  animated slideInLeft"
+                                        style="color: white; background: #393e46;">View Open Positions
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 right-column">
+                            <div class="right-content">
+                                <img src="img/hiring.png" alt="" style="width: 100%;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- dream-section end -->
+
+
+
+
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <p class="section-title  justify-content-center" style="color:#393e46;">
+                    <span></span>Testimonial<span></span>
+                </p>
+                <h1 class="text-center mb-5">What Say Our Clients!</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x  mt-n4 me-3" style="color: #00adb5;"></i>The
+                            software
+                            provided by Code Rivals has revolutionized the way we work and has saved us countless
+                            hours</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg"
+                                style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Adam</h5>
+                                <span>Mechanical Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x  mt-n4 me-3" style="color: #00adb5;"></i>Thanks
+                            , our team
+                            has increased productivity and streamlined our operations.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg"
+                                style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Alison</h5>
+                                <span>Doctor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x  mt-n4 me-3" style="color: #00adb5;"></i>The
+                            automation
+                            features on Code Rival's platform have saved us countless hours of work</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg"
+                                style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Chris</h5>
+                                <span>salesman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Newsletter Start -->
+        <div class="container-xxl  newsletter py-5 wow fadeInUp" data-wow-delay="0.1s" style="background-color:#00adb5">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title  justify-content-center style=">
+                            <span></span>Contact Us<span></span>
+                        </p>
+                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
+                        <p class=" mb-4" style="color:#393e46; font-size: larger; ">Stay connected with our seamless
+                            communication
+                            solutions that ensure
+                            you never miss a beat and always stay in touch with your team and clients</p>
+                        <div class="position-relative w-100 mt-3">
+                            <a href="./contact.html" class="btn  py-sm-3 px-sm-5  animated slideInLeft"
+                                style="color: white; background: #393e46; border-radius: 3rem;">Contact Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Navbar & Hero End -->
+ <div class="social-icons position-fixed bottom-0 start-0 mb-3 ms-3 multi-typewriter" style="font-size: 3rem;">
+    <a href="https://www.facebook.com/coderivals.tech">
+      <i class="fab fa-facebook-f" style="color:#00adb5 ;"></i>
+    </a>
+    <a href="https://twitter.com/coderivals_tech" style="position: absolute; bottom: 4rem; left: 0;">
+      <i class="fab fa-twitter" style="color:#00adb5 ;"></i>
+    </a>
+    <a href="https://www.instagram.com/coderivals.tech/" style="position: absolute; bottom: 8rem; left: 0;">
+      <i class="fab fa-instagram" style="color:#00adb5 ;"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/code-rivals/" style="position: absolute; bottom: 12rem; left: 0;">
+      <i class="fab fa-linkedin-in" style="color:#00adb5 ;"></i>
+    </a>
+  </div>
+  
+
+<!-- Footer Start -->
+<div class="container-fluid  text-light footer wow fadeIn" data-wow-delay="0.1s"
+    style="background-color: #00adb5;">
+    <div class="container py-5 px-lg-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+                <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                <p><i class="fa fa-map-marker-alt me-3"></i>USA, Chicago</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+ 1 312 6679048
+</p>
+                <p><i class="fa fa-envelope me-3"></i><a href="mailto:info@coderivals.tech" style="color: #eeeeee;">info@coderivals.tech</a></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/coderivals_tech"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/coderivals.tech"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/coderivals.tech/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/code-rivals/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <p class="section-title text-white h5 mb-4">Quick Links<span></span></p>
+                <a class="btn btn-link" href="./about.html">About Us</a>
+                <a class="btn btn-link" href="./service.html">Services</a>
+                <a class="btn btn-link" href="./contact.html">Contact Us</a>
+                <a class="btn btn-link" href="./career.html">Career</a>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                <p>Get The Latest update of our services</p>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                        placeholder="Your Email" style="height: 48px;">
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                            class="fa fa-paper-plane  fs-4"></i></button>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <p class="section-title text-white h5 mb-4"> location<span></span></p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380514.4939672074!2d-88.06162895501491!3d41.833261639516046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2s!4v1682933188517!5m2!1sen!2s"
+                    width="300" height="200" style="border-radius: 1rem" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://freewebsitecode.com">Code Rivals</a>,
+                            All
+                            Right Reserved.
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+   
+</div>
+<!-- Footer End -->
+
+        <!-- Back to Top -->
+
+    </div>
+    <div id="typewriter"></div>
+    <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js"
+        data-account-id="208243966"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js"
+        integrity="sha512-t4NGjfaRaGCjmiTGBsiG3w8FCp8ZY7dPlwZAXfeoGPARUT/rt3OP0NpQkblSgZy/2R8vPTXiEcq/zcWIJ8NusQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var images = ["img/graphic.png", "img/webban.png", "img/soft.png",]; // an array of image sources
+        var index = 0; // index of the current image
+
+        function rotateBanner() {
+            var banner = document.getElementById("banner");
+            var bannerImage = banner.querySelector('.banner-image');
+            bannerImage.classList.remove('active'); // remove the 'active' class from the current image
+            index = (index + 1) % images.length; // move to the next image in the array
+            bannerImage.src = images[index];
+            bannerImage.classList.add('active'); // add the 'active' class to the new image
+            setTimeout(rotateBanner, 4000); // call the function again after 4 seconds
+        }
+
+        window.onload = rotateBanner; // call the function when the page loads, starting the image rotation
+
+        const typewriter = new Typewriter('#typewriter', {
+            strings: ['Software Development', 'Web Development', 'Graphics Designing'],
+            autoStart: true,
+            loop: true,
+            delay: 60, // set delay to 4 seconds
+            deleteSpeed: 50
+        });
+
+
+        function QuoteEmail(event) {
+            var params = {
+                email: document.getElementById("emailFromBanner").value,
+            };
+
+            const serviceID = "service_w21y2bi";
+            const templateID = "template_dl0791d";
+
+            emailjs
+                .send(serviceID, templateID, params)
+                .then((res) => {
+                    document.getElementById("emailFromBanner").value = "";
+                    console.log(res);
+                    alert("Your message sent successfully!!");
+                    document.getElementById("QouteForm").reset();
+                })
+                .catch((err) => console.log(err));
+            document.getElementById("QouteForm").reset();
+        }
+    </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

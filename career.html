@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Code Rivals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  
+  <style>
+      
+    .card-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .card-text.expanded {
+      -webkit-line-clamp: unset;
+    }
+
+    .read-more {
+      cursor: pointer;
+      color: #eeeeee;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .more-details {
+      height: fit-content;
+    }
+  </style>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-grow"
+          style="width: 3rem; height: 3rem; color: #00adb5"
+          role="status"
+        >
+          <span class="sr-only" style="color: #393e46">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+      <div class="container-xxl position-relative p-0">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+          style="background-color: white; color: #393e46"
+        >
+          <a href="./index.html" class="navbar-brand p-0">
+            <img
+              class="img-fluid animated zoomIn multi-typewriter"
+              src="img/logo.png"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="career.html" class="nav-item nav-link active">Career</a>
+
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a
+              href="./career.html"
+              class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
+              >Join Code Rivals ?</a
+            >
+          </div>
+        </nav>
+
+        <div
+          class="container-xxl py-5 hero-header"
+          style="background-color: #00adb5"
+        >
+          <div class="container my-5 py-5 px-lg-5">
+            <div class="row g-5 py-5">
+              <div class="col-12 text-center">
+                <h1 class="text-white animated slideInDown">About Us</h1>
+                <hr class="bg-white mx-auto mt-0" style="width: 90px" />
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb justify-content-center">
+                    <h2
+                      style="
+                        font-family: Kanit;
+                        color: #393e46;
+                        font-style: italic;
+                      "
+                    >
+                      Make a Difference with Your Online Resume!
+                    </h2>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar & Hero End -->
+
+      <!-- JObs Start -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/app.png" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title">App Developer</h5>
+                <p class="card-text">
+                  Code Rivals Software Company is looking for a skilled app
+                  developer to join our team. The successful candidate will have
+                  experience in developing mobile applications for iOS and
+                  Android platforms, using programming languages such as Swift,
+                  Java, or Kotlin.
+                </p>
+                <button class="btn btn-primary read-more">Read more</button>
+                <div class="card-text more-details" style="display: none">
+                  <h6>Responsibilities:</h6>
+                  <ul>
+                    <li>
+                      Develop mobile applications for iOS and Android platforms
+                      using Swift, Java, or Kotlin
+                    </li>
+                    & Hero
+                    <li>
+                      Collaborate with cross-functional teams to identify and
+                      prioritize new features
+                    </li>
+                    <li>Write clean, scalable, and maintainable code</li>
+                    <li>
+                      Optimize mobile applications for maximum performance and
+                      user experience
+                    </li>
+                    <li>
+                      Stay up-to-date with emerging trends and technologies in
+                      mobile app development
+                    </li>
+                  </ul>
+                  <h6>Requirements:</h6>
+                  <ul>
+                    <li>
+                      Proven experience in developing mobile applications for
+                      iOS and Android platforms
+                    </li>
+                    <li>
+                      Strong skills in programming languages such as Swift,
+                      Java, or Kotlin
+                    </li>
+                    <li>
+                      Experience with mobile app development frameworks such as
+                      React Native or Flutter is a plus
+                    </li>
+                    <li>Excellent problem-solving and communication skills</li>
+                    <li>Ability to work independently and as part of a team</li>
+                  </ul>
+                </div>
+                <button class="btn btn-primary read-less" style="display: none">
+                  Read less
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-success apply-now"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Apply Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="./img/pngegg.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Web Developer</h5>
+                <p class="card-text">
+                  Code Rivals Software Company is looking for an experienced web
+                  developer to join our team. The successful candidate will have
+                  strong skills in web development, including experience with
+                  HTML, CSS, JavaScript, and other related technologies.
+                </p>
+                <button class="btn btn-primary read-more">Read more</button>
+                <div class="card-text more-details" style="display: none">
+                  <h6>Responsibilities:</h6>
+                  <ul>
+                    <li>
+                      Develop and maintain websites using HTML, CSS, and
+                      JavaScript
+                    </li>
+                    <li>
+                      Collaborate with cross-functional teams to identify and
+                      prioritize new features
+                    </li>
+                    <li>Write clean, scalable, and maintainable code</li>
+                    <li>
+                      Optimize web applications for maximum speed and
+                      scalability
+                    </li>
+                    <li>
+                      Stay up-to-date with emerging trends and technologies in
+                      web development
+                    </li>
+                  </ul>
+                  <h6>Requirements:</h6>
+                  <ul>
+                    <li>Proven experience in web development</li>
+                    <li>
+                      Strong skills in HTML, CSS, JavaScript, and related
+                      technologies
+                    </li>
+                    <li>
+                      Ability to write clean, scalable, and maintainable code
+                    </li>
+                    <li>Excellent problem-solving and communication skills</li>
+                    <li>Ability to work independently and as part of a team</li>
+                  </ul>
+                </div>
+                <button class="btn btn-primary read-less" style="display: none">
+                  Read less
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-success apply-now"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Apply Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="./img/hei.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Digital Marketing Specialist</h5>
+                <p class="card-text">
+                  Code Rivals Software Company is seeking a Digital Marketing
+                  Specialist with experience in driving website traffic,
+                  increasing brand awareness, and generating leads through
+                  online marketing channels. The successful candidate will have
+                  strong skills in digital marketing, including SEO, SEM, PPC,
+                  social media, and email marketing.
+                </p>
+                <button class="btn btn-primary read-more">Read more</button>
+                <div class="card-text more-details" style="display: none">
+                  <h6>Responsibilities:</h6>
+                  <ul>
+                    <li>
+                      Develop and execute digital marketing campaigns to drive
+                      website traffic and generate leads
+                    </li>
+                    <li>
+                      Manage and optimize pay-per-click (PPC) campaigns on
+                      Google AdWords and other advertising platforms
+                    </li>
+                    <li>
+                      Implement search engine optimization (SEO) strategies to
+                      improve website ranking and visibility
+                    </li>
+                    <li>
+                      Create and manage social media campaigns on Facebook,
+                      Twitter, Instagram, and other platforms
+                    </li>
+                    <li>
+                      Develop and execute email marketing campaigns to engage
+                      and nurture leads
+                    </li>
+                  </ul>
+                  <h6>Requirements:</h6>
+                  <ul>
+                    <li>Proven experience in digital marketing</li>
+                    <li>
+                      Strong skills in SEO, SEM, PPC, social media, and email
+                      marketing
+                    </li>
+                    <li>
+                      Ability to analyze and interpret data to measure campaign
+                      effectiveness and optimize results
+                    </li>
+                    <li>
+                      Excellent communication and project management skills
+                    </li>
+                    <li>Ability to work independently and as part of a team</li>
+                  </ul>
+                </div>
+                <button class="btn btn-primary read-less" style="display: none">
+                  Read less
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-success apply-now"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Apply Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        name="exampleModal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Apply For Job</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                id="resumeForm"
+                onsubmit="sendResumeEmail(event)"
+                name="resumeForm"
+              >
+                <div class="form-group">
+                  <label for="resumeName">Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="resumeEmail">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="resumeEmail">Message:</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                </div>
+
+                <div class="form-group" style="margin-top: 1rem">
+                  <label for="resumeFile">Resume File:</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    id="resume"
+                    name="resume"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">
+                    Send Resume
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid text-light footer wow fadeIn"
+        data-wow-delay="0.1s"
+        style="background-color: #00adb5"
+      >
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+              <p class="section-title text-white h5 mb-4">
+                Address<span></span>
+              </p>
+              <p>
+                <i class="fa fa-map-marker-alt me-3"></i>Plot L 97, Sector 5M
+                Sector 5 M New Karachi Town, Karachi, Karachi City, Sindh
+              </p>
+              <p><i class="fa fa-phone-alt me-3"></i>+ 1 312 6679048
+</p>
+              <p><i class="fa fa-envelope me-3"></i>info@coderivals.tech</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <p class="section-title text-white h5 mb-4">
+                Quick Links<span></span>
+              </p>
+              <a class="btn btn-link" href="./about.html">About Us</a>
+              <a class="btn btn-link" href="./service.html">Services</a>
+              <a class="btn btn-link" href="./contact.html">Contact Us</a>
+              <a class="btn btn-link" href="./career.html">Career</a>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <p class="section-title text-white h5 mb-4">
+                Newsletter<span></span>
+              </p>
+              <p>Get The Latest update of our services</p>
+              <div class="position-relative w-100 mt-3">
+                <input
+                  class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your Email"
+                  style="height: 48px"
+                />
+                <button
+                  type="button"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                >
+                  <i class="fa fa-paper-plane fs-4"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <p class="section-title text-white h5 mb-4">
+                location<span></span>
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380514.4939672074!2d-88.06162895501491!3d41.833261639516046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2s!4v1682933188517!5m2!1sen!2s"
+                width="300"
+                height="200"
+                style="border-radius: 1rem"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="container px-lg-5">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy;
+                <a class="border-bottom" href="https://freewebsitecode.com"
+                  >Code Rivals</a
+                >, All Right Reserved.
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="./index.html">Home</a>
+                  <a href="./about.html">Privacy Policy</a>
+                  <a href="./contact.html">Help</a>
+                  <a href="./career.html">FAQs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+   
+    </div>
+    <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js"
+    data-account-id="208243966"></script>
+    <script>
+      const readMoreBtnss = document.querySelectorAll(".read-more");
+      const moreDetails = document.querySelectorAll(".more-details");
+      const readLessBtns = document.querySelectorAll(".read-less");
+      const applyBtns = document.querySelectorAll(".apply");
+
+      readMoreBtnss.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          moreDetails[index].style.display = "block";
+          readMoreBtnss[index].style.display = "none";
+          readLessBtns[index].style.display = "inline-block";
+        });
+      });
+
+      readLessBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          moreDetails[index].style.display = "none";
+          readMoreBtnss[index].style.display = "inline-block";
+          readLessBtns[index].style.display = "none";
+        });
+      });
+
+      function sendResumeEmail(event) {
+        event.preventDefault(); // prevent the form from submitting normally
+        var spinner = document.getElementById("spinner");
+        spinner.classList.add("show");
+
+        // get the input field values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        var resume = document.getElementById("resume").files[0];
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(resume);
+        fileReader.onloadend = function () {
+          var attachmentData = fileReader.result;
+          console.log(email);
+          // send the email
+          Email.send({
+            SecureToken: "bc4cce1c-931f-4c9c-ab4b-0c22a1c9ff64",
+            To: "info@coderivals.tech",
+            From: "info@coderivals.tech",
+            Subject: message,
+            Body:
+              "Name: " +
+              name +
+              "<br>Email: " +
+              email +
+              "<br>Message: " +
+              message,
+            Attachments: [
+              {
+                name: "resume.pdf",
+                data: attachmentData,
+              },
+            ],
+          })
+            .then(function (message) {
+              // hide spinner after email is sent
+              spinner.classList.remove("show");
+              alert("Email sent successfully!" + message);
+              // reset the form and close modal
+              document.getElementById("resumeForm").reset();
+              var modal = document.getElementById("exampleModal");
+              var modalInstance = bootstrap.Modal.getInstance(modal);
+              modalInstance.hide();
+            })
+            .catch(function (error) {
+              // hide spinner on error
+              spinner.classList.remove("show");
+              alert(error);
+            });
+        };
+      }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

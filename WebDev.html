@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Code Rivals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400&display=swap" rel="stylesheet">
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<style>
+    
+    a {
+        text-decoration: none;
+    }
+
+    .pricingTable {
+        text-align: center;
+        background: #fff;
+        margin: 0 -15px;
+        box-shadow: 0 0 10px #ababab;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        color: #cad0de;
+        transform: scale(1);
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover {
+        transform: scale(1.05);
+        z-index: 1
+    }
+
+    .pricingTable .pricingTable-header {
+        padding: 40px 0;
+        background: #f5f6f9;
+        border-radius: 10px 10px 50% 50%;
+        height: 12rem;
+        margin-bottom: 1rem;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable .pricingTable-header i {
+        font-size: 50px;
+        color: #858c9a;
+        margin-bottom: 10px;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .price-value {
+        font-size: 35px;
+        color: #00adb5;
+        transition: all .5s ease 0s
+    }
+
+    .pricingTable .month {
+        display: block;
+        font-size: 14px;
+        color: #cad0de
+    }
+
+    .pricingTable:hover .month,
+    .pricingTable:hover .price-value,
+    .pricingTable:hover .pricingTable-header i {
+        color: #fff
+    }
+
+    .pricingTable .heading {
+        font-size: 24px;
+        color: #00adb5;
+        margin-bottom: 20px;
+        text-transform: uppercase
+    }
+
+    .pricingTable .pricing-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        /* margin-left: 1rem; */
+        padding: 2rem;
+        padding-top: 0px;
+
+    }
+
+    .pricingTable .pricing-content ul li {
+        line-height: 30px;
+        color:#393e46
+    }
+
+    .pricingTable .pricingTable-signup a {
+        display: inline-block;
+        font-size: 15px;
+        color: #fff;
+        padding: 10px 35px;
+        border-radius: 20px;
+        background: #00adb5;
+        text-transform: uppercase;
+        transition: all .3s ease 0s
+    }
+
+    .pricingTable .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.blue .heading,
+    .pricingTable.blue .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.blue .pricingTable-signup a,
+    .pricingTable.blue:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.blue .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.red .heading,
+    .pricingTable.red .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.red .pricingTable-signup a,
+    .pricingTable.red:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.red .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.green .heading,
+    .pricingTable.green .price-value {
+        color: #00adb5
+    }
+
+    .pricingTable.green .pricingTable-signup a,
+    .pricingTable.green:hover .pricingTable-header {
+        background: #00adb5
+    }
+
+    .pricingTable.green .pricingTable-signup a:hover {
+        box-shadow: 0 0 10px #00adb5
+    }
+
+    .pricingTable.blue:hover .price-value,
+    .pricingTable.green:hover .price-value,
+    .pricingTable.red:hover .price-value {
+        color: #fff
+    }
+
+
+
+
+
+    .fa-check {
+        margin-right: 4px !important;
+    }
+
+    .fa-times {
+        margin-right: 10px !important;
+
+    }
+
+    .pricing-content ul {
+        text-align: left;
+    }
+
+
+    .pricing-content {
+        min-height: 65rem;
+        height: fit-content;
+
+
+    }
+
+    .fa-question-circle {
+        color: #00adb5;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 5px;
+
+    }
+
+    .topFeature {
+        text-align: center;
+        font-size: 18px;
+        /* font-weight: 500; */
+        font-family: inherit;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    .bestFor {
+        font: 400;
+        font-size: 0.9rem;
+        padding: 1rem;
+        text-align: justify;
+        color: #393e46;
+        background-color: #f5f6f9;
+    }
+
+    .PrevInc{
+        color: red;
+        font-size: 14px;
+        padding: 1rem;
+        text-align: center;
+    }
+    .order-2 p{
+      
+    }
+
+    
+    .order-2 p {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+     font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: start;
+    display: inline-block;
+
+    }
+    @media screen and (max-width:575px) {
+        .main {
+            font-size: 20px;
+        }
+
+        .pricing-content {
+        min-height: fit-content !important;
+    }
+    .PrevInc{
+        font-size: 18px;
+       font-weight: 400;
+       text-align:center ;
+    }
+  
+    .topFeature{
+      margin-top: 10px !important;
+    }
+
+    .order-2 p{
+        margin-top: 1rem;
+        font-size: larger;
+        margin-bottom: 4rem;
+        
+    }
+
+    .pricingTable{
+        margin: 1rem;
+    margin-top: 3rem;
+    }
+
+    
+    .bestFor {
+        font-size: 23px;
+        min-height: fit-content !important;
+        height: fit-content !important;
+        line-height: 31px;
+    }
+    }
+
+    .multi-typewriter {
+        animation: moveUpDown 3s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .bestFor {
+        font: 400;
+        font-size: 15px;
+        padding: 1rem;
+        text-align:start ;
+        color: #393e46;
+        background-color: #f5f6f9;
+        min-height: 8rem;
+        height: fit-content;
+        line-height: 20px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow" style="width: 3rem; height: 3rem; color: #00adb5;" role="status">
+                <span class="sr-only" style="color: #393e46;">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+                style="background-color: white; color: #393e46;">
+                <a href="./index.html" class="navbar-brand p-0">
+                    <img class="img-fluid animated zoomIn multi-typewriter" src="img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="career.html" class="nav-item nav-link active">Career</a>
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="./career.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Join Code Rivals
+                        ?</a>
+                </div>
+            </nav>
+
+
+            <div class="container-xxl py-5  hero-header" style="background-color: #00adb5;">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Website Development</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <h2 style="font-family: Kanit; color: #393e46; font-style: italic;">
+                                        Stunning, user-friendly websites that help grow your business, backed by our
+                                        expertise in custom development and responsive design.
+                                    </h2>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div  class="container">
+
+
+            <header class="section-header">
+                <h3 class="text-center">Website Development</h3>
+                <p class="text-center">"Crafting exceptional websites with expertise."
+   "
+                </p>
+            </header>
+
+            <div class="row about-container">
+
+                <div class="col-lg-6 content order-lg-1 order-2">
+                    <p >
+                       We understand the importance of creating a website that delivers an exceptional user experience. Our team of skilled developers and designers will work closely with you to develop a custom website that is not only visually appealing but also easy to navigate, fast, and responsive across all devices. We offer a wide range of services including website design, programming, content creation, and search engine optimization to ensure that your website stands out from the competition. Whether you are looking to build a new website from scratch or revamp your existing one, we have a range of packages to suit your needs and budget. Let us help you take your online presence to the next level. Contact us today to learn more about our User Website Development services and pricing plans.              </p>
+                 
+            
+                </div>
+
+                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+                    <img src="img/websec.png" class="img-fluid" alt="" style="margin-bottom: 5rem;">
+
+                </div>
+            </div>
+
+
+         </div>
+
+            <div class="demo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 ">
+                            <div class="pricingTable">
+                                <div class="pricingTable-header">
+                                    <i class="fas fa-home"></i>
+
+                                    </h4>
+                                    <div class="pricing-plan mt-4 pt-2">
+                                        <h4 class="text-muted"><s>$799</s> <span class="plan pl-3 price-value">$599
+                                            </span>
+                                        </h4>
+                                    </div>
+                                </div>
+                              
+
+                                <h3 class="heading">Basic</h3>
+
+                                <div class="pricing-content">
+                                    <p class="bestFor">Ideal for small businesses, startups, or individuals looking for
+                                        a basic website with essential features and reliable support.</p>
+                                    <ul>
+                                     
+                                        
+                                        <h6 class="topFeature" style="margin-top:6.4rem;">Top feature</h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>5 pages of website
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Creation of up to 5 pages (Home, About Us, Contact Us, Services, and a custom page of your choice) with engaging content that showcases your business and services."></i>
+                                        </li>
+
+                                        <li class="main"><i class="fas fa-check text-success"></i>Responsive
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="
+                                                Code Rivals offers mobile-responsive website design and development services that adapt to all screen sizes, providing a seamless user experience on smartphones and tablets."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Basic SEO
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="we offer comprehensive Basic SEO services that involve optimizing website content and technical aspects to improve visibility and ranking on search engine results pages for relevant queries."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Contact form included
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="A contact form is a web-based form that enables website visitors to send messages to the website owner."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Basic Animation
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers Basic animation integration services in web pages, utilizing dynamic elements to enhance user experience and improve engagement, creating visually appealing websites."></i>
+                                        </li>
+                                   
+                                        <li class="main"><i class="fas fa-check text-success"></i>2 revision round
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers two revision rounds during website development to ensure client satisfaction with the final product."></i>
+                                        </li>
+
+
+
+                                        <h6 class="topFeature">Free Bonuses </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free hosting
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer a free hosting service that provides server space and connectivity for storing and serving website files, with a one-year renewal term"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free domain
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We provide a free domain registration service that offers a unique web address used to identify a website on the internet, with a one-year renewal term."></i>
+                                        </li>
+                                        <li class="main"><i class="fa fa-times text-danger"></i>Free business email
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title=" Our free professional email service allows businesses to use their own domain name for email addresses, with a one-year renewal term. "></i>
+                                        </li>
+                                   
+
+                                        <h6 class="topFeature">Security </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Cloudflare Protected
+                                            Nameservers
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer Cloudflare protected nameservers that provide an additional layer of security and performance for your website."></i>
+                                        </li>
+                                        <li class="main"><i class="fa fa-times text-danger"></i>Malware Scanner
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our malware scanner service detects and removes malicious code from your website to ensure its security."></i>
+                                        </li>
+
+
+                                        <h6 class="topFeature">Service and Support </h6>
+
+                                        <li class="main"><i class="fa fa-times text-danger"></i>Website maintenance
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="website maintenance services are available for an additional charge of $99. This charge would apply every time the maintenance service is requested by the customer"></i>
+                                        </li>
+                                        <li class="main"><i class="fa fa-times text-danger"></i>24/7 customer support
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="our basic package does not include 24/7 support services. However, if a customer requires support outside of the package's support hours, they can purchase additional support at a rate of $10 per instance."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                            Guarantee
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="pricingTable-signup">
+                                    <a href="./contact.html">Contact Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable green">
+                                <div class="pricingTable-header">
+                                    <i class="fas fa-cube"></i>
+                                    <div class="pricing-plan mt-4 pt-2">
+                                        <h4 class="text-muted"><s>$1500</s> <span class="plan pl-3 price-value">$999
+                                            </span>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                                <h3 class="heading">Starter </h3>
+                                <div class="pricing-content">
+                                    <p class="bestFor">This package is perfect for individuals and middle level businesses looking to establish their online presence and reach their target audience.</p>
+                                    <p class="PrevInc">
+                                        This package includes all services from our previous packages </p>
+                                   
+                                    <ul>
+                                        <h6 class="topFeature">Top feature</h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>10 pages of website
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Creation of up to 10 pages (Home, About Us, Contact Us, Services, and a custom page of your choice) with engaging content that showcases your business and services."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Custom design
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Creating a unique design for the website that aligns with the client's brand and target audience.
+
+                                                "></i>
+                                        </li>
+                       
+                                        <li class="main"><i class="fas fa-check text-success"></i>Advance SEO
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="we offer comprehensive Advance SEO services that involve optimizing website content and technical aspects to improve visibility and ranking on search engine results pages for relevant queries."></i>
+                                        </li>
+
+                                        <li class="main"><i class="fas fa-check text-success"></i> Social media
+                                            integration
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Adding social media links and widgets to the website to help promote the client's social media profiles."></i>
+                                        </li>
+
+                                   
+                                        <li class="main"><i class="fas fa-check text-success"></i>Advance Animation
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers Advance animation integration services in web pages, utilizing dynamic elements to enhance user experience and improve engagement, creating visually appealing websites."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Custom features
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="
+                                                A customized contact form integration service is available that enables website visitors to send messages easily to the website owner."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>4 revision round
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers 4 revision rounds during website development to ensure client satisfaction with the final product."></i>
+                                        </li>
+
+
+                                        <h6 class="topFeature">Free Bonuses </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free hosting
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer a free hosting service that provides server space and connectivity for storing and serving website files, with a one-year renewal term"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free domain
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We provide a free domain registration service that offers a unique web address used to identify a website on the internet, with a one-year renewal term."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free business email
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title=" Our free professional email service allows businesses to use their own domain name for email addresses, with a one-year renewal term. "></i>
+                                        </li>
+
+                                        <h6 class="topFeature">Security </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Cloudflare Protected
+                                            Nameservers
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer Cloudflare protected nameservers that provide an additional layer of security and performance for your website."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Malware Scanner
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our malware scanner service detects and removes malicious code from your website to ensure its security."></i>
+                                        </li>
+
+
+                                        <h6 class="topFeature">Service and Support </h6>
+
+                                        <li class="main"><i class="fa fa-times text-danger"></i>Website maintenance
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="website maintenance services are available for an additional charge of $99. This charge would apply every time the maintenance service is requested by the customer"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                            Guarantee
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="./contact.html">Contact Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable blue">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-star"></i>
+                                    <div class="pricing-plan mt-4 pt-2">
+                                        <h4 class="text-muted"><s>$2000</s> <span class="plan pl-3 price-value">$1499
+                                            </span>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                                <h3 class="heading">Premium</h3>
+                                <div class="pricing-content">
+                                   
+                                    <p class="bestFor">Unlock the full potential of your business with our Premium website development package, designed to take your online presence to the next level.</p>
+                                    <p class="PrevInc">
+                                        This package includes all services from our previous packages </p>
+                                   
+                                    <ul>
+                                        <h6 class="topFeature">Top feature</h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i> 15 pages of website 
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Creation of up to 15 pages (Home, About Us, Contact Us, Services, and a custom page of your choice) with engaging content that showcases your business and services."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Expert Custom design
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Creating a unique design for the website that aligns with the client's brand and target audience.
+
+                                                "></i>
+                                        </li>
+                       
+                                        <li class="main"><i class="fas fa-check text-success"></i>Expert SEO
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="we offer comprehensive Advance SEO services that involve optimizing website content and technical aspects to improve visibility and ranking on search engine results pages for relevant queries."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>CMS integration
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="
+                                                We offer CMS integration as a feature of our web development services, enabling clients to easily manage website content without technical expertise. Our expert team ensures seamless integration with their CMS of choice."></i>
+                                        </li>
+
+       
+                                   
+                                        <li class="main"><i class="fas fa-check text-success"></i>User authentication and login functionality
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer user authentication and login functionality as a key feature of our web development services, enabling our clients to provide personalized experiences for their users and secure access to sensitive data."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Payment gateway 
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer payment gateway integration services as a key feature of our web development services, ensuring secure online transactions for our clients' customers and seamless payment processing for our clients."></i>
+                                        </li>
+                                        
+                                        <li class="main"><i class="fas fa-check text-success"></i>10  revision round
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers 10 revision rounds during website development to ensure client satisfaction with the final product."></i>
+                                        </li>
+                                        
+
+
+                                        <h6 class="topFeature">Free Bonuses </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free hosting
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer a free hosting service that provides server space and connectivity for storing and serving website files, with a one-year renewal term"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free domain
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We provide a free domain registration service that offers a unique web address used to identify a website on the internet, with a one-year renewal term."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free business email
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title=" Our free professional email service allows businesses to use their own domain name for email addresses, with a one-year renewal term. "></i>
+                                        </li>
+
+                                        <h6 class="topFeature">Security </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Cloudflare Protected
+                                            Nameservers
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer Cloudflare protected nameservers that provide an additional layer of security and performance for your website."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Malware Scanner
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our malware scanner service detects and removes malicious code from your website to ensure its security."></i>
+                                        </li>
+
+
+                                        <h6 class="topFeature">Service and Support </h6>
+
+                                        <li class="main"><i class="fas fa-check text-success"></i>Website maintenance
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="website maintenance services are available for an additional charge of $99. This charge would apply every time the maintenance service is requested by the customer"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                            Guarantee
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="./contact.html">Contact Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable red">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                    <div class="pricing-plan mt-4 pt-2">
+                                        <h4 class="text-muted"><s>$10000</s> <span class="plan pl-3 price-value">$4999
+                                            </span>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                                <h3 class="heading">Elite</h3>
+                                <div class="pricing-content">
+                                    
+                                    <p class="bestFor">
+                                        Our Elite service package offers a premium website development experience with exceptional design and cutting-edge technology.</p>
+                                        <p class="PrevInc">
+                                            This package includes all services from our previous packages </p>
+                                       
+                                        <ul>
+                                        <h6 class="topFeature">Top feature</h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i> 25 pages of website
+                                            pages of website 
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Creation of up to 25 pages (Home, About Us, Contact Us, Services, and a custom page of your choice) with engaging content that showcases your business and services."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>E-commerce functionality
+
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="we provide e-commerce functionality in our web development services, enabling clients to sell their products and services online, accept payments securely, and manage their inventory and orders efficiently.
+
+                                                .
+
+                                                "></i>
+                                        </li>
+                       
+                                        <li class="main"><i class="fas fa-check text-success"></i>Online Chat functionality
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Online chat system is a communication tool that allows businesses to interact with their customers in real-time, and as a software company we offer this feature to enhance customer engagement and improve customer support."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Analytics integration
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="
+                                                we offer analytics integration services to help our clients track and analyze their website's performance. Our team will integrate tools such as Google Analytics and provide insights on website traffic, user behavior, and more."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Mobile app integration
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="
+                                                Our mobile app integration services enable our clients to extend their online presence to mobile devices, providing a seamless and optimized user experience across different platforms."></i>
+                                        </li>
+       
+                                   
+                            
+                                        <li class="main"><i class="fas fa-check text-success"></i>20  revision round
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Code Rivals offers 20 revision rounds during website development to ensure client satisfaction with the final product."></i>
+                                        </li>
+                                        
+
+
+                                        <h6 class="topFeature">Free Bonuses </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free hosting
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer a free hosting service that provides server space and connectivity for storing and serving website files, with a one-year renewal term"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free domain
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We provide a free domain registration service that offers a unique web address used to identify a website on the internet, with a one-year renewal term."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Free business email
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title=" Our free professional email service allows businesses to use their own domain name for email addresses, with a one-year renewal term. "></i>
+                                        </li>
+
+                                        <h6 class="topFeature">Security </h6>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Cloudflare Protected
+                                            Nameservers
+
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We offer Cloudflare protected nameservers that provide an additional layer of security and performance for your website."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>Malware Scanner
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our malware scanner service detects and removes malicious code from your website to ensure its security."></i>
+                                        </li>
+
+
+                                        <h6 class="topFeature">Service and Support </h6>
+
+                                        <li class="main"><i class="fas fa-check text-success"></i>Website maintenance
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="website maintenance services are available for an additional charge of $99. This charge would apply every time the maintenance service is requested by the customer"></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>24/7 customer support
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Our 24/7 customer support team is available to provide prompt assistance and solutions to any technical issues or inquiries you may have, ensuring that you have a seamless experience with our services at all times."></i>
+                                        </li>
+                                        <li class="main"><i class="fas fa-check text-success"></i>99,90% Uptime
+                                            Guarantee
+                                            <i class="fa fa-question-circle" aria-hidden="true" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="We guarantee a 99.90% uptime for our services, ensuring that your website and online presence remain accessible to your customers and audience, without any interruption or downtime."></i>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="./contact.html">Contact Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+           
+
+        <!-- Navbar & Hero End -->
+        <div class="social-icons position-fixed bottom-0 start-0 mb-3 ms-3 multi-typewriter" style="font-size: 3rem;">
+            <a href="https://www.facebook.com/coderivals.tech">
+              <i class="fab fa-facebook-f" style="color:#00adb5 ;"></i>
+            </a>
+            <a href="https://twitter.com/coderivals_tech" style="position: absolute; bottom: 4rem; left: 0;">
+              <i class="fab fa-twitter" style="color:#00adb5 ;"></i>
+            </a>
+            <a href="https://www.instagram.com/coderivals.tech/" style="position: absolute; bottom: 8rem; left: 0;">
+              <i class="fab fa-instagram" style="color:#00adb5 ;"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/code-rivals/" style="position: absolute; bottom: 12rem; left: 0;">
+              <i class="fab fa-linkedin-in" style="color:#00adb5 ;"></i>
+            </a>
+          </div>
+          
+
+        <!-- Footer Start -->
+        <div class="container-fluid  text-light footer wow fadeIn" data-wow-delay="0.1s"
+            style="background-color: #00adb5;">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>USA, Chicago</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+ 1 312 6679048
+</p>
+                        <p><i class="fa fa-envelope me-3"></i><a href="mailto:info@coderivals.tech" style="color: #eeeeee;">info@coderivals.tech</a></p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/coderivals_tech"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/coderivals.tech"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/coderivals.tech/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/code-rivals/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Links<span></span></p>
+                        <a class="btn btn-link" href="./about.html">About Us</a>
+                        <a class="btn btn-link" href="./service.html">Services</a>
+                        <a class="btn btn-link" href="./contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="./career.html">Career</a>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>Get The Latest update of our services</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane  fs-4"></i></button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4"> location<span></span></p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380514.4939672074!2d-88.06162895501491!3d41.833261639516046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2s!4v1682933188517!5m2!1sen!2s"
+                            width="300" height="200" style="border-radius: 1rem" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                        <div class="copyright">
+                            <div class="row">
+                                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                    &copy; <a class="border-bottom" href="https://freewebsitecode.com">Code Rivals</a>,
+                                    All
+                                    Right Reserved.
+                                </div>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+           
+        </div>
+        <!-- Footer End -->
+
+
+        <a href="#banner" class="btn btn-lg  btn-lg-square back-to-top"
+            style="background-color: #393e46; color: #eeeeee;"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script async id="slcLiveChat" default-number="DEFAULT-NUMBER"
+    src="https://widget.sonetel.com/SonetelWidget.min.js"
+        data-account-id="208243966" ></script>
+
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
