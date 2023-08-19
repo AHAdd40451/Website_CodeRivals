@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "coderivals",
     "public": "public",
     "ignore": [
       "firebase.json",
